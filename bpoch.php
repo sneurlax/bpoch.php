@@ -1,7 +1,7 @@
 <?php
 /**
  * bpoch
- * Time and calendar tools for bitcoin and decentralized currencies
+ * Time and calendar library for bitcoin and several other cryptocurrencies
  *
  * @package    bpoch.php
  * @author     sneurlax <sneurlax@gmail.com>
