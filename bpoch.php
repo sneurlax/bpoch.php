@@ -1,7 +1,7 @@
 <?php
 /**
  * bpoch
- * Time and calendar library for bitcoin and several other cryptocurrencies
+ * Time and calendar tools for bitcoin and decentralized currencies
  *
  * @package    bpoch.php
  * @author     sneurlax <sneurlax@gmail.com>
@@ -41,6 +41,28 @@ function bpoch( $coin = 'btc' ) {
   }
 
   return time() - $adjustment;
+}
+
+/**
+ * Return the current block reward era given a block height
+ *
+ * @param  in   block height
+ *
+ * @return int  block reward era
+ */
+function block_era( $height ) {
+  return floor($height/210000)+1;
+}
+
+/**
+ * Return the current block reward given a block height
+ *
+ * @param  in   block height
+ *
+ * @return int  block reward
+ */
+function block_reward( $height ) {
+  return 50/(2**floor($height/210000));
 }
 
 ?>
